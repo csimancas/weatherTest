@@ -1,80 +1,36 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Nombre de la Aplicación Blog de React Native
 
-# Getting Started
+Una aplicación de React Native que muestra una lista de entradas en el blog y permite a los usuarios ver los detalles de cada entrada.
+Requisitos Previos
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Asegúrate de tener los siguientes elementos instalados antes de comenzar:
 
-## Step 1: Start the Metro Server
+    Node.js (versión X.X.X o superior)
+    npm (generalmente se instala junto con Node.js)
+    Expo CLI (opcional, pero recomendado para el desarrollo)
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+Instalación
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Sigue estos pasos para instalar y configurar la aplicación:
 
-```bash
-# using npm
-npm start
+    Clona este repositorio en tu máquina local utilizando Git: https://github.com/csimancas/weatherTest
 
-# OR using Yarn
-yarn start
-```
+    Entramos a la carpeta del proyecto: cd BlogTest
 
-## Step 2: Start your Application
+    Hacemos un yarn o npm install para instalar las dependencias del proyecto. npm install || yarn
+    En caso de correr el proyecto en ios sera necesario entrar a la carpeta de ios y hacer correr el siguiente comando: pod install
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+    Para correr el proyecto en macos y linux:
+        npm start && npm run android
 
-### For Android
+    
 
-```bash
-# using npm
-npm run android
+    Es necesario mencionar en la carpeta de utils, esta el archivo api.ts, tiene una pequeña validación dependiendo como se quiera utilizar el app, puede ser corriendo el servidor en local, o utilizar el back que esta en heroku, solo sera necesario poner la constante dev en true para local, o en false para utilizarla con el servidor.
 
-# OR using Yarn
-yarn android
-```
+** Nota **
 
-### For iOS
+Para acceder a un servidor local en tu máquina de desarrollo desde el emulador de Android, debes utilizar una dirección IP especial que apunte a la interfaz de red de tu máquina. En el caso de emuladores Android, la dirección IP que debes usar es 10.0.2.2. Esta dirección IP actúa como un puente entre el emulador y la máquina de desarrollo, permitiendo que el emulador acceda a los recursos locales de la máquina de desarrollo.
 
-```bash
-# using npm
-npm run ios
+** Nota **
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# weatherTest
+Es necesario correr el proyecto de back antes de iniciar la aplicacion movil, para poder ver la informacion que esta en las apis.
