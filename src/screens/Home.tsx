@@ -1,6 +1,6 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import ListPlaces from '../components/ListPlaces';
 import SearchInput from '../components/SearchInput';
 import useHome from '../hooks/useHome';
@@ -20,6 +20,9 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/clima.png')} style={styles.image} />
+      <Text style={styles.textStyle}>
+        Por favor escribre la ciudad o destino ...
+      </Text>
 
       <SearchInput
         value={searchText}
@@ -42,6 +45,13 @@ const styles = StyleSheet.create({
     width: 180,
     height: 180,
     alignSelf: 'center',
+    marginBottom: 10,
+  },
+  textStyle: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'white',
     marginBottom: 10,
   },
 });
